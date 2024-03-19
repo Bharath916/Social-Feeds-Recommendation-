@@ -1,7 +1,7 @@
-# User and Policy management
+# social Feed Recommendation
 
 1. This project contains dynamic CRUD operations using node.js as server with storing it in MongoDB
-2. For MongoDB connection, using an "programingChallenge" .env (it will redirect to )
+2. For MongoDB connection, using an "social Feed Recommendation" .env (it will redirect to )
 
 # Creating .env file
 
