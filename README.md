@@ -1,7 +1,12 @@
-# User and Policy management
+# social Feed Recommendation
 
+<<<<<<< HEAD
 1. This project contains dynamic CRUD operations using node.js as server with stored data in MongoDB
 2. For MongoDB connection, using an "SocialFeeds" .env (it will redirect to )
+=======
+1. This project contains dynamic CRUD operations using node.js as server with storing it in MongoDB
+2. For MongoDB connection, using an "social Feed Recommendation" .env (it will redirect to )
+>>>>>>> ae7fc46a2fc0ea90bf4c34c20b79dd6831f07eea
 
 # Creating .env file
 
