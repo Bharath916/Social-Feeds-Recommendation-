@@ -1,0 +1,446 @@
+{
+	"info": {
+		"_postman_id": "cf3c59e3-d739-46a1-9980-ad56a079c99e",
+		"name": "taskProgramming APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19937716"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign-up with populate DB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/populateDB",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"populateDB"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginAPI",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test-amy@gmail.com\",\r\n    \"password\":\"AJTask!515\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/auth/log-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"auth",
+								"log-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userPost",
+			"item": [
+				{
+					"name": "AddUserPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postUrl\": \"image1\",\r\n    \"text\": \"Just finished a great workout session 💪 #fitness #workout\",\r\n    \"status\":\"DRAFT\",\r\n    \"IsSeen\":false\r\n  \r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/add?userId=65f9152f86d84e40af7e5fb2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"add"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"find"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserPost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n            \"postUrl\": \"bharathImage\",\r\n            \"text\": \"Great work by you 💪 #fitness #workout\",\r\n            \"status\": \"PUBLISH\",\r\n            \"IsSeen\": true,\r\n            \"userId\": \"65f9152e86d84e40af7e5fb0\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/update/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"update",
+								":id"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65f92f0821f5d530a977e2d8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n            \"postUrl\": \"bharathImage\",\r\n            \"text\": \"Great work by you 💪 #fitness #workout\",\r\n            \"status\": \"PUBLISH\",\r\n            \"IsSeen\": true,\r\n            \"userId\": \"65f9152e86d84e40af7e5fb0\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/delete/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"delete",
+								":id"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65f92f0821f5d530a977e2d8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "addCommentBasedOnUserInterst",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"65f99d3288d5e74f6b828663\",\r\n    \"comment\":\"good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/commentPost/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"commentPost",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "65f9153186d84e40af7e5fc0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommentBasedOnPopularity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/commentCounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"commentCounts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65f9153186d84e40af7e5fc0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "addLikeByUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"65f92fd121f5d530a977e2de\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/likePost/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"likePost",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "likeCountsBasedOnHigest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"65f92fd121f5d530a977e2de\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/countLikes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"countLikes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sports",
+			"item": [
+				{
+					"name": "addSportsByUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"sportName\":\"Fitness\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/v1/addSports/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"addSports",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "65f9153086d84e40af7e5fba"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userInterestBasedOnPopularity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/recommendUserInterest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"recommendUserInterest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postRecommendByUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/postRecommendByUser/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"postRecommendByUser",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "65f9152f86d84e40af7e5fb2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

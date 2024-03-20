@@ -16,7 +16,7 @@ router.delete("/delete/:id", ControllersData.deleteData);
 router.post("/likePost/:userId", ControllersData.likePost);
 router.get("/countLikes", ControllersData.countLikes);
 
-router.post("/commentPost", ControllersData.commentPost);
+router.post("/commentPost/:userId", ControllersData.commentPost);
 router.get("/commentCounts", ControllersData.commentCounts);
 
 router.post("/addSports/:userId", ControllersData.interestSports);
