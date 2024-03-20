@@ -30,6 +30,9 @@ app.use(express.urlencoded({ extended: true, limit: "100mb" }));
 app.use("/test", (req, res) => {
   res.send(config.serviceName + "is LIVE");
 });
+app.use("/", (req, res) => {
+  console.log("Welcome to social feeds");
+});
 
 db.connectWithRetry(mongodbURI);
 

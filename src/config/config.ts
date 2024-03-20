@@ -10,6 +10,9 @@ export class config {
     userAccount: "userAccount",
     userPost: "userPost",
     likes: "likes",
+    comments: "comments",
+    sports: "sports",
+    events: "events",
   };
   static serviceName: string;
   static mongodbURI: string;
