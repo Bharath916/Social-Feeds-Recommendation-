@@ -19,6 +19,11 @@
    - Once install dependencies then start the backend server
 2. npm start
 
+# To Test APIs use following method:
+   - Go inside root directory > src > postmanScripts > taskProgramming.API file.
+   - Select and copy all the raw content then go to postman application, click on import and paste it.
+   - All APIs should reflected.
+
 # Here's a step-by-step guide to dockerize a Node.js application and a MongoDB database:
 
 Step 1 : Set up a Node.js project with your application code. - Include a package.json file with your project dependencies and scripts.
